@@ -26,11 +26,16 @@
 table.contents {
   display: inline-block;
 }
-.contents tr:nth-child(even) {
-  color: #dedede;
+.contents th {
+  font-size: 20px;
 }
-.contents tr:nth-child(odd) {
+.contents tr a {
   color: #bbbbbb;
+  font-weight: bold;
+  text-decoration: none;
+}
+.contents tr:nth-child(even) a {
+  color: #dedede;
 }
 
 * {
