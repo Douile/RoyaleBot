@@ -116,6 +116,23 @@
      "name": "servers",
      "description": "Print the current fortnite server status",
      "permission": "servers"
+   },
+   {
+     "name": "setbackground",
+     "description": "Change background for generated images. (You may include multiple urls seperated by spaces to use a random selection from all urls specified)",
+     "permission": "admin",
+     "arguments": [
+       {
+         "name": "type",
+         "possible": ["shop","stat","upcoming","all"],
+         "required": true
+       },
+       {
+         "name": "url",
+         "possible": null,
+         "required": true
+       }
+     ]
    }
  ]
 }
