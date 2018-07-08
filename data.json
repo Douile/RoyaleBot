@@ -2,6 +2,7 @@
  "default": [
    {
      "name": "help",
+     "description": "Print out a help embed containing all the commands you can use.",
      "permission": null,
      "arguments": [
        {
@@ -16,6 +17,7 @@
    },
    {
      "name": "setprefix",
+     "description": "Change the prefix used for all commands on your server.",
      "permission": "admin",
      "arguments": [
        {
@@ -27,10 +29,12 @@
    },
    {
      "name": "channels",
+     "description": "Print out all the set channels on your server",
      "permission": "admin"
    },
    {
      "name": "setchannel",
+     "description": "Set the channel used to the type specified.",
      "permission": "admin",
      "arguments": [
        {
@@ -42,6 +46,7 @@
    },
    {
      "name": "resetchannels",
+     "description": "Unset channels set on your server.",
      "permission": "admin",
      "arguments": [
        {
@@ -55,18 +60,17 @@
  "fortnite": [
    {
      "name": "shop",
+     "description": "Print an image of todays fortnite shop",
      "permission": "shop"
    },
    {
      "name": "upcoming",
+     "description": "Print an image of upcoming items.",
      "permission": "upcoming"
    },
    {
-     "name": "shop",
-     "permission": "shop"
-   },
-   {
      "name": "stats",
+     "description": "Print an image of your fortnite stats.",
      "permission": "stats",
      "arguments": [
        {
@@ -83,6 +87,7 @@
    },
    {
      "name": "link",
+     "description": "Link your fortnite account so that you don't need to type it for the stats command.",
      "permission": "stats",
      "arguments": [
        {
@@ -99,14 +104,17 @@
    },
    {
      "name": "unlink",
+     "description": "Unlink your fortnite account.",
      "permission": "stats"
    },
    {
      "name": "news",
+     "description": "Print the current fortnite news.",
      "permission": "news"
    },
    {
      "name": "servers",
+     "description": "Print the current fortnite server status",
      "permission": "servers"
    }
  ]
