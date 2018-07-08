@@ -99,19 +99,23 @@ class Argument:
             required = ''
         return string.format_map(Map({'name':self.name,'required':required}))
     def overview(self):
-        text = '<span class="command-name-argument {required}">[{name}]'
+        text = '<span class="command-name-argument {required}">[{name}]<span class="command-name-argument-possible">'
+        if self.required:
+            t = 'Required'
+        else:
+            t = 'Not required'
+        text += '<span class="command-name-argument-possible-item">{0}</span>'.format(t)
         if self.possible is not None:
             try:
                 possible = list(self.possible)
-                text += '<span class="command-name-argument-possible">'
+                text += '<span class="command-name-argument-possible-item">One of:</span>'
                 for item in possible:
                     text += '<span class="command-name-argument-possible-item">'
                     text += item
                     text += '</span>'
-                text += '</span>'
             except ValueError:
                 pass
-        text+= '</span>'
+        text+= '</span></span>'
         return self.format(text)
     def __str__(self,*,use=None):
         text = 'Argument: {name}'
