@@ -1,0 +1,113 @@
+{
+ "default": [
+   {
+     "name": "help",
+     "permission": null,
+     "arguments": [
+       {
+         "name": "module",
+         "possible": [
+           "fortnite",
+           "moderation"
+         ],
+         "required": false
+       }
+     ]
+   },
+   {
+     "name": "setprefix",
+     "permission": "admin",
+     "arguments": [
+       {
+         "name": "prefix",
+         "possible": null,
+         "required": true
+       }
+     ]
+   },
+   {
+     "name": "channels",
+     "permission": "admin"
+   },
+   {
+     "name": "setchannel",
+     "permission": "admin",
+     "arguments": [
+       {
+         "name": "type",
+         "possible": ["autoshop","autostatus","autonews","autocheatsheets","shop","stats","upcoming","news","servers","all"],
+         "required": true
+       }
+     ]
+   },
+   {
+     "name": "resetchannels",
+     "permission": "admin",
+     "arguments": [
+       {
+         "name": "type",
+         "possible": ["autoshop","autostatus","autonews","autocheatsheets","shop","stats","upcoming","news","servers"],
+         "required": false
+       }
+     ]
+   }
+ ],
+ "fortnite": [
+   {
+     "name": "shop",
+     "permission": "shop"
+   },
+   {
+     "name": "upcoming",
+     "permission": "upcoming"
+   },
+   {
+     "name": "shop",
+     "permission": "shop"
+   },
+   {
+     "name": "stats",
+     "permission": "stats",
+     "arguments": [
+       {
+         "name": "platform",
+         "possible": ["pc","xbox","psn"],
+         "required": false
+       },
+       {
+         "name": "username",
+         "possible": null,
+         "required": false
+       }
+     ]
+   },
+   {
+     "name": "link",
+     "permission": "stats",
+     "arguments": [
+       {
+         "name": "platform",
+         "possible": ["pc","xbox","psn"],
+         "required": false
+       },
+       {
+         "name": "username",
+         "possible": null,
+         "required": true
+       }
+     ]
+   },
+   {
+     "name": "unlink",
+     "permission": "stats"
+   },
+   {
+     "name": "news",
+     "permission": "news"
+   },
+   {
+     "name": "servers",
+     "permission": "servers"
+   }
+ ]
+}
