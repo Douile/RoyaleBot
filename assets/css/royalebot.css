@@ -21,6 +21,17 @@
 .embed {
   margin: 2px 0px;
 }
+.discord-invite {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  background: #7187dd;
+  border-radius: 5px;
+  display: inline-block;
+  width: 300px;
+  padding: 5px;
+  text-align: center;
+}
 .content {
   position: absolute;
   top: calc(10% + 5px);
