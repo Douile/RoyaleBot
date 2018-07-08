@@ -98,6 +98,9 @@ table.contents {
   display: block;
   color: #fff;
 }
+.command-permission::before {
+  content: "Permission: ";
+}
 
 
 * {

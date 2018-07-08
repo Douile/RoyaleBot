@@ -76,7 +76,10 @@ class Command:
         text = '<div class="command" id="command-{name}"><div class="command-name"><span class="command-name-command">{prefix}{name}</span> '
         for argument in self.arguments:
             text += argument.overview() + ' '
-        text += '</div><div class="command-permission">{permission}</div><div class="command-description">{description}</div></div>'
+        text += '</div>'
+        if self.permission is not None:
+            text += '<div class="command-permission">{permission}</div>'
+        text += '<div class="command-description">{description}</div></div>'
         return self.format(text)
     def contents(self):
         text = '<tr><td><a href="#command-{name}">{prefix}{name}</a></td></tr>'
