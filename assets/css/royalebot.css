@@ -57,10 +57,10 @@ table.contents {
 }
 .command-name-argument {
   cursor: pointer;
-  color: #355691;
+  color: #EB5E28;
 }
 .command-name-argument.required {
-  color: #5F5AA2;
+  color: #06AED5;
 }
 .command-name-argument > .command-name-argument-possible {
   display: none;
