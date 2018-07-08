@@ -44,6 +44,9 @@ table.contents {
 .section > h1 {
   text-transform: capitalize;
 }
+.command-name-argument > .command-name-argument-possible {
+  display: none;
+}
 
 * {
   color: #fff;
