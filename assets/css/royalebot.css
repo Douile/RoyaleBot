@@ -9,7 +9,6 @@
 }
 .floating-header {
   overflow: hidden;
-  text-align: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,10 +18,25 @@
 .floating-header > img {
   height: 100%;
 }
+.content {
+  position: absolute;
+  top: calc(10% + 5px);
+  width: 100%;
+}
+table.contents {
+  display: inline-block;
+}
+.contents tr:nth-child(even) {
+  color: #dedede;
+}
+.contents tr:nth-child(odd) {
+  color: #bbbbbb;
+}
 
 * {
   color: #fff;
   background: #4e4e4e;
   text-align: center;
   font-family: arial;
+  box-sizing: border-box;
 }
