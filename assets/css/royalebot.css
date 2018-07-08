@@ -44,6 +44,24 @@ table.contents {
 .section > h1 {
   text-transform: capitalize;
 }
+.command-name, .command-name * {
+  font-family: monospace;
+  background: none;
+  color: #000;
+}
+.command-name {
+  padding: 5px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 5px;
+}
+.command-name-argument {
+  cursor: pointer;
+  color: #355691;
+}
+.command-name-argument.required {
+  color: #5F5AA2;
+}
 .command-name-argument > .command-name-argument-possible {
   display: none;
 }

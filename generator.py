@@ -93,9 +93,13 @@ class Argument:
         self.required = bool(required)
         self.position = int(position)
     def format(self,string):
-        return string.format_map(Map({'name':self.name,'required':self.required}))
+        if self.required:
+            required = 'required'
+        else:
+            required = ''
+        return string.format_map(Map({'name':self.name,'required':required}))
     def overview(self):
-        text = '<span class="command-name-argument required-{required}">[{name}]'
+        text = '<span class="command-name-argument {required}">[{name}]'
         if self.possible is not None:
             try:
                 possible = list(self.possible)
