@@ -58,13 +58,43 @@ table.contents {
 .command-name-argument {
   cursor: pointer;
   color: #EB5E28;
+  position: relative;
+  display: inline-block;
 }
 .command-name-argument.required {
   color: #06AED5;
 }
-.command-name-argument > .command-name-argument-possible {
-  display: none;
+.command-name-argument .command-name-argument-possible {
+  --width: 120px;
+  position: absolute;
+  width: var(--width);
+  top: 100%;
+  left: 50%;
+  margin-left: calc(var(--width) / 2);
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0px;
+  border-radius: 5px;
+  z-index: 1;
+  transition: .5s ease opacity;
 }
+.command-name-argument:hover .command-name-argument-possible {
+  opacity: 1;
+}
+.command-name-argument .command-name-argument-possible::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  margin-right: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0,0,0,0.6) transparent;
+}
+
 
 * {
   color: #fff;
