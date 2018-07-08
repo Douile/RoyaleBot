@@ -73,7 +73,7 @@ class Command:
     def format(self,string):
         return string.format_map(Map({'name':self.name,'description':self.description,'permission':self.permission}))
     def overview(self):
-        text = '<div class="command" id="command-{name}"><div class="command-name"><span class="command-name-command">{name}</span> '
+        text = '<div class="command" id="command-{name}"><div class="command-name"><span class="command-name-command">{prefix}{name}</span> '
         for argument in self.arguments:
             text += argument.overview() + ' '
         text += '</div><div class="command-permission">{permission}</div><div class="command-description">{description}</div></div>'
@@ -95,7 +95,19 @@ class Argument:
     def format(self,string):
         return string.format_map(Map({'name':self.name,'required':self.required}))
     def overview(self):
-        text = '<span class="command-name-argument required-{required}">[{name}]</span>'
+        text = '<span class="command-name-argument required-{required}">[{name}]'
+        if self.possible is not None:
+            try:
+                possible = list(self.possible)
+                text += '<span class="command-name-argument-possible">'
+                for item in possible:
+                    text += '<span class="command-name-argument-possible-item">'
+                    text += item
+                    text += '</span>'
+                text += '</span>'
+            except ValueError:
+                pass
+        text+= '</span>'
         return self.format(text)
     def __str__(self,*,use=None):
         text = 'Argument: {name}'

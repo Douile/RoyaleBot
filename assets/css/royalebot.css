@@ -28,6 +28,7 @@ table.contents {
 }
 .contents th {
   font-size: 20px;
+  text-transform: capitalize;
 }
 .contents tr a {
   color: #bbbbbb;
@@ -36,6 +37,12 @@ table.contents {
 }
 .contents tr:nth-child(even) a {
   color: #dedede;
+}
+.section {
+  border-top: 2px dashed #fff;
+}
+.section > h1 {
+  text-transform: capitalize;
 }
 
 * {
