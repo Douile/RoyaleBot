@@ -6,10 +6,14 @@
   top: 0;
   width: 100%;
   height: 100%;
+  background-image: url(/RoyaleBot/assets/static/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .floating-header {
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -120,7 +124,7 @@ table.contents {
 
 * {
   color: #fff;
-  background: #4e4e4e;
+  background: none;
   text-align: center;
   font-family: arial;
   box-sizing: border-box;
