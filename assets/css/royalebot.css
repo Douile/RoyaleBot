@@ -18,6 +18,9 @@
 .floating-header > img {
   height: 100%;
 }
+.embed {
+  margin: 2px 0px;
+}
 .content {
   position: absolute;
   top: calc(10% + 5px);
