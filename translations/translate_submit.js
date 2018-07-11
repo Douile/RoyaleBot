@@ -57,3 +57,4 @@ function save() {
     saveAs(content,`${parsed.code}.zip`);
   })
 }
+save();
