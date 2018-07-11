@@ -38,7 +38,7 @@ function loadLanguage(code,root) {
       var row = TableRow();
       row.addData(key);
       row.addData('English:<br>New:')
-      row.addData(`<input type="text" readonly value="${json[key].message}"><br><input type="text" name="message_${key}">`);
+      row.addData(`<input type="text" readonly value="${json[key].message.replace('\\','\\\\')}"><br><input type="text" name="message_${key}">`);
       row.append(root);
     }
   })
