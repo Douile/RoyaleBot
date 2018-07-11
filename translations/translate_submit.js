@@ -51,8 +51,8 @@ function save() {
   var parsed = parseData(data);
   var zip = new JSZip();
   var folder = zip.folder(parsed.code);
-  folder.file('manifest.json',JSON.parse(parsed.manifest));
-  folder.file('messages.json',JSON.parse(parsed.messages));
+  folder.file('manifest.json',JSON.stringify(parsed.manifest));
+  folder.file('messages.json',JSON.stringify(parsed.messages));
   zip.generateAsync({type:'blob'}).then(function(content) {
     saveAs(content,`${parsed.code}.zip`);
   })
