@@ -9,7 +9,7 @@ function TableRow() {
   this.addData = function(content) {
     this.addEL('td',content);
   }
-  this.addEL(tag,content) {
+  this.addEL = function(tag,content) {
     var dom = document.createElement(tag);
     dom.innerHTML = content;
     this.dom.appendChild(dom);
