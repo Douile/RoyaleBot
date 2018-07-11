@@ -37,7 +37,7 @@ function parseData(data) {
       code = value;
     } else if (key.startsWith(MSG_PREFIX)) {
       var msgKey = key.substr(MSG_PREFIX.length);
-      messages[msgKey] = value;
+      messages[msgKey] = {'message':value};
     }
   }
   return {
