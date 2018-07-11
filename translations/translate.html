@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>RoyaleBot | Translate</title>
+<meta name="theme-color" content="#6ad2f7">
+<meta name="author" content="Douile">
+<link rel="apple-touch-icon" sizes="180x180" href="/RoyaleBot/assets/static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/RoyaleBot/assets/static/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/RoyaleBot/assets/static/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/RoyaleBot/assets/static/favicon-16x16.png">
+<link rel="manifest" href="/RoyaleBot/assets/static/site.webmanifest">
+<link rel="mask-icon" href="/RoyaleBot/assets/static/safari-pinned-tab.svg" color="#6ad2f7">
+<link rel="shortcut icon" href="/RoyaleBot/assets/static/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="RoyaleBot">
+<meta name="application-name" content="RoyaleBot">
+<meta name="msapplication-TileColor" content="#6ad2f7">
+<meta name="msapplication-TileImage" content="/RoyaleBot/assets/static/mstile-144x144.png">
+<meta name="msapplication-config" content="/RoyaleBot/assets/static/browserconfig.xml">
+<meta name="theme-color" content="#6ad2f7">
+<meta property="og:image" content="https://douile.github.io/RoyaleBot/assets/static/og-image.jpg">
+<meta property="og:image:width" content="279">
+<meta property="og:image:height" content="279">
+<meta property="og:description" content="Fortnite news, status, shop and stats to bling up your discord server.">
+<meta property="og:title" content="RoyaleBot">
+<meta property="og:url" content="https://douile.github.io/RoyaleBot/index.html">
+<meta name="twitter:card" value="summary">
+<meta name="twitter:title" content="RoyaleBot">
+<meta name="twitter:description" content="Fortnite news, status, shop and stats to bling up your discord server.">
+<meta name="twitter:image" content="https://douile.github.io/RoyaleBot/assets/static/og-image.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Create a translation for royalebot</h1>
+<p>Please don't google translate</p>
+<form method="get" action="translate_submit.html" id="translate_form">
+<div class="section">
+<div class="section-title">You</div>
+<div class="section-desc">So that I can credit you if your translation is used</div>
+<table class="section-content">
+<tr><td>Name</td>
+<td><input type="text" name="author_name"></td></tr>
+<tr><td>Discord Client ID</td>
+<td><input type="text" name="author"></td></tr>
+</table>
+</div>
+<div class="section">
+<div class="section-title">Language</div>
+<table class="section-content">
+<tr><td>Name (in language)</td>
+<td><input type="text" name="lang_name"></td></tr>
+<tr><td>Name (in english)</td>
+<td><input type="text" name="lang_name_en"></td></tr>
+<tr><td>ISO-639-1 Code (<a target="_blank" href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">lookup here</a>)</td>
+<td><input type="text" name="lang_code"></td></tr>
+</table>
+</div>
+<div class="section">
+<div class="section-title">Messages</div>
+<div class="section-desc">Translate the messages, please maintain anything inside {} however you can move them around to suit the new language</div>
+<table class="section-content" id="message-container"></table>
+</div>
+<input type="submit" value="Save">
+</form>
+<script src="translate.js"></script>
+</body>
+</html>
