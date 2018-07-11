@@ -30,7 +30,7 @@ function onLoad() {
 }
 
 function loadLanguage(code,root) {
-  var url = `_locales/${code}/messages.json`;
+  var url = `locales/${code}/messages.json`;
   fetch(url).then((res) => {
     return res.json();
   }).then((json) => {
