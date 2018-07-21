@@ -18,6 +18,7 @@ function TableRow() {
 }
 
 const HEADERS = ['Key','','Value'];
+const LOCALES = {'en':'English','nl':'Dutch','br':'Portuguese'};
 
 function onLoad() {
   var root = document.getElementById('message-container');
@@ -26,10 +27,25 @@ function onLoad() {
     heads.addHeader(HEADERS[i]);
   }
   heads.append(root);
+  var select = document.getElementById('choose-locale');
+  for (var code in LOCALES) {
+    var option = document.createElement('option');
+    option.innerText = LOCALES[code];
+    option.setAttribute('value',code);
+  }
+  select.addEventListener('change',selectNew);
   loadLanguage('en',root);
 }
 
+function selectNew(e) {
+  var code = e.target.value;
+  loadLanguage(code);
+}
+
 function loadLanguage(code,root) {
+  while (root.children.length > 0) {
+    root.firstChild.remove();
+  }
   var url = `locales/${code}/messages.json`;
   fetch(url).then((res) => {
     return res.json();
@@ -37,7 +53,7 @@ function loadLanguage(code,root) {
     for (var key in json) {
       var row = TableRow();
       row.addData(key);
-      row.addData('English:<br>New:')
+      row.addData('Original:<br>New:')
       row.addData(`<input type="text" readonly value="${json[key].message.replace('\\','\\\\')}"><br><input type="text" name="message_${key}">`);
       row.append(root);
     }
