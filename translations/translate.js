@@ -32,6 +32,7 @@ function onLoad() {
     var option = document.createElement('option');
     option.innerText = LOCALES[code];
     option.setAttribute('value',code);
+    select.appendChild(option);
   }
   select.addEventListener('change',selectNew);
   loadLanguage('en',root);
