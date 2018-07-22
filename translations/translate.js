@@ -44,6 +44,7 @@ function selectNew(e) {
 }
 
 function loadLanguage(code,root) {
+  var root = document.getElementById('message-container');
   while (root.children.length > 0) {
     root.firstChild.remove();
   }
