@@ -19,6 +19,7 @@ function TableRow() {
 
 const HEADERS = ['Key','','Value'];
 const LOCALES = {'en':'English','nl':'Dutch','pt-br':'Portuguese'};
+const MSG_PREFIX = 'message_';
 
 function onLoad() {
   var root = document.getElementById('message-container');
