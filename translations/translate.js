@@ -128,6 +128,7 @@ function save(data) {
   folder.file('messages.json',JSON.stringify(parsed.messages));
   zip.generateAsync({type:'blob'}).then(function(content) {
     saveAs(content,`${parsed.code}.zip`);
+    alert('Please send the downloaded zip file via discord to Tom#4405');
   })
 }
 window.addEventListener('load',onLoad);
