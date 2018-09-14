@@ -39,15 +39,11 @@ function onLoad() {
   form.addEventListener('submit',(e) => {
     e.preventDefault();
     var data = {},
-    doms = document.getElementsByTagName('input'),
-    i = 0;
-    doms.forEach((dom) => {
-      i += 1;
-      data[dom.getAttribute('name')] = dom.value;
-      if (i >= doms.length) {
-        save(data);
-      }
-    })
+    doms = document.getElementsByTagName('input');
+    for (var i=0;i<doms.length;i++) {
+      data[doms[i].getAttribute('name')] = doms[i].value();
+    }
+    save(data);
   })
   loadLanguage('en',root);
 }
@@ -130,6 +126,4 @@ function save(data) {
     saveAs(content,`${parsed.code}.zip`);
   })
 }
-save();
-
 window.addEventListener('load',onLoad);
