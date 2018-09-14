@@ -43,7 +43,7 @@ function onLoad() {
     for (var i=0;i<doms.length;i++) {
       var name = doms[i].getAttribute('name');
       if (name !== null && doms[i].value) {
-        data[name] = doms[i].value();
+        data[name] = doms[i].value;
       }
     }
     save(data);
