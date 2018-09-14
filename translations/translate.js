@@ -41,7 +41,10 @@ function onLoad() {
     var data = {},
     doms = document.getElementsByTagName('input');
     for (var i=0;i<doms.length;i++) {
-      data[doms[i].getAttribute('name')] = doms[i].value();
+      var name = doms[i].getAttribute('name');
+      if (name !== null && doms[i].value) {
+        data[name] = doms[i].value();
+      }
     }
     save(data);
   })
